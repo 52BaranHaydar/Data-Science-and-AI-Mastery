@@ -1,0 +1,130 @@
+# 📊 İstatistik ve Olasılık Dağılımları (Statistics & Probability Distributions)
+
+[![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
+[![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)](https://numpy.org/)
+[![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
+[![SciPy](https://img.shields.io/badge/SciPy-8CAAE6?style=for-the-badge&logo=scipy&logoColor=white)](https://scipy.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
+Veri bilimi, makine öğrenmesi, istatistik ve yapay zeka alanlarında temel teşkil eden **İstatistik ve Olasılık Dağılımları** için kapsamlı, teorik ve uygulamalı Türkçe eğitim ve uygulama deposu.
+
+Her konu ve dağılım için:
+- 📖 **Sezgisel ve teorik açıklamalar**,
+- 📐 **Matematiksel formüller (LaTeX formülleri, PMF / PDF, CDF, Momentler)**,
+- 🧪 **NumPy, Pandas ve SciPy ile simülasyonlar & hesaplamalar**,
+- 📊 **Matplotlib ve Seaborn ile zengin görselleştirmeler**,
+- 💼 **Gerçek hayat senaryoları ve vaka analizleri (Ev fiyat tahmini, A/B testi, çağrı merkezi vb.)**,
+- 📑 **Ders notları ve PDF slaytları** yer almaktadır.
+
+---
+
+## 📚 Notebook Serisi ve Yol Haritası (Roadmap)
+
+### 📘 0. Temel İstatistik ve Veri Bilimi
+- [x] **[İstatistik ve Veri Bilimi Temelleri](istatistik_ve_veri_bilimi_temelleri.ipynb)**
+  - **Örnekleme (Sampling) Teknikleri:** Olasılıklı (Basit Rastgele, Sistematik, Tabakalı, Küme) ve Olasılıksız (Kolayda, Yargısal, Kartopu, Kota) yöntemler.
+  - **Veri Tipleri Şeması:** Nicel (Kesikli / Sürekli) ve Nitel (Nominal / Ordinal) değişkenler.
+  - **Dağılım Ölçüleri & 5 Sayı Özeti:** Mean, Median, Mode, Varyans, Standart Sapma, $Q_1, Q_3$, $\text{IQR} = Q_3 - Q_1$, Alt/Üst Çit ve Aykırı Değer (Outlier) filtreleme + Boxplot.
+  - **Çarpıklık (Skewness):** Sağa Çarpık ($\text{Mod} < \text{Medyan} < \text{Ortalama}$), Simetrik ve Sola Çarpık ($\text{Ortalama} \le \text{Medyan} \le \text{Mod}$) kuralları ve KDE grafikleri.
+  - **İlişki Ölçütleri:** `pd.concat`, Kovaryans (`.cov()`), Pearson Korelasyonu (`.corr()`) ve Isı Haritası (`sns.heatmap`).
+  - **Olasılık Fonksiyonları:** Kesikli için PMF, Sürekli için PDF ve Birikimli CDF. Ev Fiyat Tahmini değişken sınıflandırması.
+
+### 🎲 1. Ayrık (Discrete) Olasılık Dağılımları
+- [x] **[Bernoulli Dağılımı (Bernoulli Distribution)](bernoulli_distribution.ipynb)**
+  - Tek denemeli iki sonuçlu olaylar, PMF/CDF, Varyans analizi, Büyük Sayılar Yasası (LLN) simülasyonu, CTR ve Kalite Kontrol örnekleri.
+- [x] **[Binom Dağılımı (Binomial Distribution)](binom_distribution.ipynb)**
+  - $n$ bağımsız Bernoulli denemesi, kombinasyon formülleri, PMF/CDF basamak eğrileri, Merkezi Limit Teoremi (Normal dağılıma yakınsama), A/B testi ve hata analizleri.
+- [x] **[Poisson Dağılımı (Poisson Distribution)](poission_distribution.ipynb)**
+  - Sabit zaman/alan aralıklarındaki nadir olaylar, $\lambda$ parametresi, Eşitlik İlkesi ($E[X]=\text{Var}(X)=\lambda$), Çağrı Merkezi ve Otopark modelleri, Binom'dan Poisson'a yakınsama.
+- [ ] **Geometrik Dağılım (Geometric Distribution)**
+- [ ] **Hipergeometrik Dağılım (Hypergeometric Distribution)**
+- [ ] **Negatif Binom Dağılımı (Negative Binomial Distribution)**
+- [ ] **Ayrık Düzgün Dağılım (Discrete Uniform Distribution)**
+
+### 📈 2. Sürekli (Continuous) Olasılık Dağılımları
+- [x] **[Normal (Gauss) Dağılımı (Normal Distribution)](normal_distribution.ipynb)**
+  - Çan eğrisi simetrisi, $\mu$ ve $\sigma$ parametreleri, PDF/CDF formülleri, 68-95-99.7 Ampirik Kuralı (3-Sigma), Q-Q Plot ve Normallik Testleri (Shapiro-Wilk), Fabrika Tolerans Analizi, Finansal Risk (VaR %95) ve Merkezi Limit Teoremi (CLT) simülasyonu.
+- [x] **[Standart Normal Dağılım & Z-Skoru (Standard Normal & Z-Score)](standard_normal_distribution.ipynb)**
+  - Z-dönüşümü ($Z = \frac{X-\mu}{\sigma}$), Klasik Z-Tablosu oluşturma ve arama fonksiyonu, $|Z| > 3$ ve Dayanıklı (Robust / MAD) Aykırı Değer Tespiti, Kritik Değerler ($\alpha=0.05 \implies Z=\pm 1.96$), Üniversite Çan Eğrisi Sınav Notlandırması ve Siber Güvenlik (DDoS Trafiği Anomali Alarmı).
+- [x] **[Düzgün / Uniform Dağılım (Continuous & Discrete Uniform)](uniform_distribution.ipynb)**
+  - Eşit olasılık ilkesi, Sürekli $U(a, b)$ ve Ayrık Zar PMF modelleri, Bakkal şeker satışı ($[50, 55]$ aralığı) tam çözümü, Monte Carlo Yöntemi ile $\pi$ Sayısı Tahmini, Ters Dönüşüm Yöntemi (Inverse Transform Sampling) ile rastgele sayı üretimi, Otobüs Bekleme Süresi ve Makine Öğrenmesinde Hiperparametre Arama.
+- [ ] **Üstel Dağılım (Exponential Distribution)**
+- [ ] **Gamma Dağılımı (Gamma Distribution)**
+- [ ] **Beta Dağılımı (Beta Distribution)**
+- [ ] **Ki-Kare Dağılımı (Chi-Square Distribution)**
+- [ ] **Student-t Dağılımı (Student's t-Distribution)**
+- [ ] **F Dağılımı (F-Distribution)**
+
+---
+
+## 📁 PDF Ders Notları ve Dokümanlar ([PDF/](PDF/))
+
+Depoda yer alan teorik ders notları ve görsel konu özetleri:
+
+1. 📄 **[1 - Probability.pdf](PDF/1+-+Probability.pdf):** Temel olasılık kavramları, örnek uzay, olaylar ve olasılık aksiyomları.
+2. 📄 **[2 - Probability Distribution Functions.pdf](PDF/2+-+Probability_Distribution_Functions.pdf):** Olasılık fonksiyonları, PMF, PDF, CDF ve moment hesaplama temelleri.
+3. 📄 **[3 - Bernouilli and Binom.pdf](PDF/3+-+Bernouilli_and_Binom.pdf):** Bernoulli denemeleri ve Binom dağılımı teorik anlatımı.
+4. 📄 **[4 - Poisson.pdf](PDF/4+-+Poisson.pdf):** Poisson süreci, oran parametresi ($\lambda$) ve uygulama alanları.
+5. 📄 **[5 - Normal Dağılım.pdf](PDF/5+-+Normal_Dağılım.pdf):** Gauss / Normal dağılım, çan eğrisi özellikleri ve standartlaştırma.
+6. 📄 **[6 - Uniform Distribution.pdf](PDF/6+-+Uniform_Distribution.pdf):** Düzgün (Uniform) dağılım özellikleri.
+7. 📄 **[7 - Log Normal Distribution.pdf](PDF/7+-+Log_Normal_Distribution.pdf):** Log-Normal dağılım ve pozitif çarpık veri modelleme.
+
+---
+
+## 🚀 Hızlı Başlangıç & Kurulum
+
+### 1. Depoyu Klonlayın
+```bash
+git clone https://github.com/52BaranHaydar/Olasilik-Dagilimlari.git
+cd Olasilik-Dagilimlari
+```
+
+### 2. Sanal Ortam (Virtual Environment) Oluşturun ve Aktif Edin
+```bash
+# macOS / Linux
+python3 -m venv venv
+source venv/bin/activate
+
+# Windows
+python -m venv venv
+venv\Scripts\activate
+```
+
+### 3. Gerekli Paketleri Yükleyin
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Jupyter Notebook'u Başlatın
+```bash
+jupyter notebook
+# veya
+jupyter lab
+```
+
+---
+
+## 📦 Kullanılan Kütüphaneler
+
+- **[NumPy](https://numpy.org/):** Vektörize matematiksel işlemler ve rastgele veri üretimi.
+- **[SciPy (stats)](https://scipy.org/):** İstatistiksel dağılım nesneleri, olasılık fonksiyonları (PMF, PDF, CDF, PPF) ve moment hesaplamaları.
+- **[Pandas](https://pandas.pydata.org/):** Veri işleme, özet tablolar ve analiz.
+- **[Matplotlib](https://matplotlib.org/) & [Seaborn](https://seaborn.pydata.org/):** Yüksek çözünürlüklü ve estetik grafik görselleştirmeleri.
+
+---
+
+## 🤝 Katkıda Bulunma
+
+Katkılarınızı memnuniyetle kabul ediyoruz!
+1. Bu depoyu Fork'layın.
+2. Yeni bir özellik dalı oluşturun (`git checkout -b feature/YeniDagilim`).
+3. Değişikliklerinizi commit'leyin (`git commit -m 'feat: Poisson dagilimi eklendi'`).
+4. Dalınıza push yapın (`git push origin feature/YeniDagilim`).
+5. Bir Pull Request açın.
+
+---
+
+## 📄 Lisans
+
+Bu proje [MIT Lisansı](LICENSE) altında lisanslanmıştır.
